@@ -1,0 +1,140 @@
+[
+{
+  "directory": "C:/Users/brigh/VS Code/OpenGL/build",
+  "command": "C:\\mingw64\\bin\\g++.exe  @CMakeFiles/OpenGL.dir/includes_CXX.rsp -g -o CMakeFiles\\OpenGL.dir\\src\\main.cpp.obj -c \"C:\\Users\\brigh\\VS Code\\OpenGL\\src\\main.cpp\"",
+  "file": "C:/Users/brigh/VS Code/OpenGL/src/main.cpp",
+  "output": "CMakeFiles/OpenGL.dir/src/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/brigh/VS Code/OpenGL/build",
+  "command": "C:\\mingw64\\bin\\gcc.exe  @CMakeFiles/OpenGL.dir/includes_C.rsp -g -o CMakeFiles\\OpenGL.dir\\src\\glad.c.obj -c \"C:\\Users\\brigh\\VS Code\\OpenGL\\src\\glad.c\"",
+  "file": "C:/Users/brigh/VS Code/OpenGL/src/glad.c",
+  "output": "CMakeFiles/OpenGL.dir/src/glad.c.obj"
+},
+{
+  "directory": "C:/Users/brigh/VS Code/OpenGL/build/_deps/glfw-build/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=c99 -Wall -o CMakeFiles\\glfw.dir\\context.c.obj -c \"C:\\Users\\brigh\\VS Code\\OpenGL\\build\\_deps\\glfw-src\\src\\context.c\"",
+  "file": "C:/Users/brigh/VS Code/OpenGL/build/_deps/glfw-src/src/context.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/context.c.obj"
+},
+{
+  "directory": "C:/Users/brigh/VS Code/OpenGL/build/_deps/glfw-build/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=c99 -Wall -o CMakeFiles\\glfw.dir\\init.c.obj -c \"C:\\Users\\brigh\\VS Code\\OpenGL\\build\\_deps\\glfw-src\\src\\init.c\"",
+  "file": "C:/Users/brigh/VS Code/OpenGL/build/_deps/glfw-src/src/init.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/init.c.obj"
+},
+{
+  "directory": "C:/Users/brigh/VS Code/OpenGL/build/_deps/glfw-build/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=c99 -Wall -o CMakeFiles\\glfw.dir\\input.c.obj -c \"C:\\Users\\brigh\\VS Code\\OpenGL\\build\\_deps\\glfw-src\\src\\input.c\"",
+  "file": "C:/Users/brigh/VS Code/OpenGL/build/_deps/glfw-src/src/input.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/input.c.obj"
+},
+{
+  "directory": "C:/Users/brigh/VS Code/OpenGL/build/_deps/glfw-build/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=c99 -Wall -o CMakeFiles\\glfw.dir\\monitor.c.obj -c \"C:\\Users\\brigh\\VS Code\\OpenGL\\build\\_deps\\glfw-src\\src\\monitor.c\"",
+  "file": "C:/Users/brigh/VS Code/OpenGL/build/_deps/glfw-src/src/monitor.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/monitor.c.obj"
+},
+{
+  "directory": "C:/Users/brigh/VS Code/OpenGL/build/_deps/glfw-build/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=c99 -Wall -o CMakeFiles\\glfw.dir\\platform.c.obj -c \"C:\\Users\\brigh\\VS Code\\OpenGL\\build\\_deps\\glfw-src\\src\\platform.c\"",
+  "file": "C:/Users/brigh/VS Code/OpenGL/build/_deps/glfw-src/src/platform.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/platform.c.obj"
+},
+{
+  "directory": "C:/Users/brigh/VS Code/OpenGL/build/_deps/glfw-build/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=c99 -Wall -o CMakeFiles\\glfw.dir\\vulkan.c.obj -c \"C:\\Users\\brigh\\VS Code\\OpenGL\\build\\_deps\\glfw-src\\src\\vulkan.c\"",
+  "file": "C:/Users/brigh/VS Code/OpenGL/build/_deps/glfw-src/src/vulkan.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/vulkan.c.obj"
+},
+{
+  "directory": "C:/Users/brigh/VS Code/OpenGL/build/_deps/glfw-build/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=c99 -Wall -o CMakeFiles\\glfw.dir\\window.c.obj -c \"C:\\Users\\brigh\\VS Code\\OpenGL\\build\\_deps\\glfw-src\\src\\window.c\"",
+  "file": "C:/Users/brigh/VS Code/OpenGL/build/_deps/glfw-src/src/window.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/window.c.obj"
+},
+{
+  "directory": "C:/Users/brigh/VS Code/OpenGL/build/_deps/glfw-build/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=c99 -Wall -o CMakeFiles\\glfw.dir\\egl_context.c.obj -c \"C:\\Users\\brigh\\VS Code\\OpenGL\\build\\_deps\\glfw-src\\src\\egl_context.c\"",
+  "file": "C:/Users/brigh/VS Code/OpenGL/build/_deps/glfw-src/src/egl_context.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/egl_context.c.obj"
+},
+{
+  "directory": "C:/Users/brigh/VS Code/OpenGL/build/_deps/glfw-build/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=c99 -Wall -o CMakeFiles\\glfw.dir\\osmesa_context.c.obj -c \"C:\\Users\\brigh\\VS Code\\OpenGL\\build\\_deps\\glfw-src\\src\\osmesa_context.c\"",
+  "file": "C:/Users/brigh/VS Code/OpenGL/build/_deps/glfw-src/src/osmesa_context.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/osmesa_context.c.obj"
+},
+{
+  "directory": "C:/Users/brigh/VS Code/OpenGL/build/_deps/glfw-build/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=c99 -Wall -o CMakeFiles\\glfw.dir\\null_init.c.obj -c \"C:\\Users\\brigh\\VS Code\\OpenGL\\build\\_deps\\glfw-src\\src\\null_init.c\"",
+  "file": "C:/Users/brigh/VS Code/OpenGL/build/_deps/glfw-src/src/null_init.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/null_init.c.obj"
+},
+{
+  "directory": "C:/Users/brigh/VS Code/OpenGL/build/_deps/glfw-build/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=c99 -Wall -o CMakeFiles\\glfw.dir\\null_monitor.c.obj -c \"C:\\Users\\brigh\\VS Code\\OpenGL\\build\\_deps\\glfw-src\\src\\null_monitor.c\"",
+  "file": "C:/Users/brigh/VS Code/OpenGL/build/_deps/glfw-src/src/null_monitor.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/null_monitor.c.obj"
+},
+{
+  "directory": "C:/Users/brigh/VS Code/OpenGL/build/_deps/glfw-build/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=c99 -Wall -o CMakeFiles\\glfw.dir\\null_window.c.obj -c \"C:\\Users\\brigh\\VS Code\\OpenGL\\build\\_deps\\glfw-src\\src\\null_window.c\"",
+  "file": "C:/Users/brigh/VS Code/OpenGL/build/_deps/glfw-src/src/null_window.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/null_window.c.obj"
+},
+{
+  "directory": "C:/Users/brigh/VS Code/OpenGL/build/_deps/glfw-build/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=c99 -Wall -o CMakeFiles\\glfw.dir\\null_joystick.c.obj -c \"C:\\Users\\brigh\\VS Code\\OpenGL\\build\\_deps\\glfw-src\\src\\null_joystick.c\"",
+  "file": "C:/Users/brigh/VS Code/OpenGL/build/_deps/glfw-src/src/null_joystick.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/null_joystick.c.obj"
+},
+{
+  "directory": "C:/Users/brigh/VS Code/OpenGL/build/_deps/glfw-build/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=c99 -Wall -o CMakeFiles\\glfw.dir\\win32_module.c.obj -c \"C:\\Users\\brigh\\VS Code\\OpenGL\\build\\_deps\\glfw-src\\src\\win32_module.c\"",
+  "file": "C:/Users/brigh/VS Code/OpenGL/build/_deps/glfw-src/src/win32_module.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/win32_module.c.obj"
+},
+{
+  "directory": "C:/Users/brigh/VS Code/OpenGL/build/_deps/glfw-build/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=c99 -Wall -o CMakeFiles\\glfw.dir\\win32_time.c.obj -c \"C:\\Users\\brigh\\VS Code\\OpenGL\\build\\_deps\\glfw-src\\src\\win32_time.c\"",
+  "file": "C:/Users/brigh/VS Code/OpenGL/build/_deps/glfw-src/src/win32_time.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/win32_time.c.obj"
+},
+{
+  "directory": "C:/Users/brigh/VS Code/OpenGL/build/_deps/glfw-build/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=c99 -Wall -o CMakeFiles\\glfw.dir\\win32_thread.c.obj -c \"C:\\Users\\brigh\\VS Code\\OpenGL\\build\\_deps\\glfw-src\\src\\win32_thread.c\"",
+  "file": "C:/Users/brigh/VS Code/OpenGL/build/_deps/glfw-src/src/win32_thread.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/win32_thread.c.obj"
+},
+{
+  "directory": "C:/Users/brigh/VS Code/OpenGL/build/_deps/glfw-build/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=c99 -Wall -o CMakeFiles\\glfw.dir\\win32_init.c.obj -c \"C:\\Users\\brigh\\VS Code\\OpenGL\\build\\_deps\\glfw-src\\src\\win32_init.c\"",
+  "file": "C:/Users/brigh/VS Code/OpenGL/build/_deps/glfw-src/src/win32_init.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/win32_init.c.obj"
+},
+{
+  "directory": "C:/Users/brigh/VS Code/OpenGL/build/_deps/glfw-build/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=c99 -Wall -o CMakeFiles\\glfw.dir\\win32_joystick.c.obj -c \"C:\\Users\\brigh\\VS Code\\OpenGL\\build\\_deps\\glfw-src\\src\\win32_joystick.c\"",
+  "file": "C:/Users/brigh/VS Code/OpenGL/build/_deps/glfw-src/src/win32_joystick.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/win32_joystick.c.obj"
+},
+{
+  "directory": "C:/Users/brigh/VS Code/OpenGL/build/_deps/glfw-build/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=c99 -Wall -o CMakeFiles\\glfw.dir\\win32_monitor.c.obj -c \"C:\\Users\\brigh\\VS Code\\OpenGL\\build\\_deps\\glfw-src\\src\\win32_monitor.c\"",
+  "file": "C:/Users/brigh/VS Code/OpenGL/build/_deps/glfw-src/src/win32_monitor.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/win32_monitor.c.obj"
+},
+{
+  "directory": "C:/Users/brigh/VS Code/OpenGL/build/_deps/glfw-build/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=c99 -Wall -o CMakeFiles\\glfw.dir\\win32_window.c.obj -c \"C:\\Users\\brigh\\VS Code\\OpenGL\\build\\_deps\\glfw-src\\src\\win32_window.c\"",
+  "file": "C:/Users/brigh/VS Code/OpenGL/build/_deps/glfw-src/src/win32_window.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/win32_window.c.obj"
+},
+{
+  "directory": "C:/Users/brigh/VS Code/OpenGL/build/_deps/glfw-build/src",
+  "command": "C:\\mingw64\\bin\\gcc.exe -DUNICODE -DWINVER=0x0501 -D_GLFW_WIN32 -D_UNICODE @CMakeFiles/glfw.dir/includes_C.rsp -g -std=c99 -Wall -o CMakeFiles\\glfw.dir\\wgl_context.c.obj -c \"C:\\Users\\brigh\\VS Code\\OpenGL\\build\\_deps\\glfw-src\\src\\wgl_context.c\"",
+  "file": "C:/Users/brigh/VS Code/OpenGL/build/_deps/glfw-src/src/wgl_context.c",
+  "output": "_deps/glfw-build/src/CMakeFiles/glfw.dir/wgl_context.c.obj"
+}
+]

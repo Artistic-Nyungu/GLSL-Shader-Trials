@@ -9,6 +9,14 @@ An implementation has to be a module at the moment, I do hope it's not too clute
 
 That's it for my boring introduction. You shall assume the position.
 
+# Set Up
+Soooo... I don't know how to approach this. I know nothing about configuring and setting up projects.
+I am using cmake, so if you are using VScode, it should work fine.
+
+I did have to reconfigure one extension to use the coompliler that I specified, so I do not know.
+
+You can raise issues if you come across any, I will try to assist if I can.
+
 # Libraries
 - GLFW - [Download](https://www.glfw.org/download)
 - Glad - [Generate include and source files](https://glad.dav1d.de/)

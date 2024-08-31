@@ -9,6 +9,11 @@ An implementation has to be a module at the moment, I do hope it's not too clute
 
 That's it for my boring introduction. You shall assume the position.
 
+# Libraries
+- GLFW - [Download](https://www.glfw.org/download)
+- Glad - [Generate include and source files](https://glad.dav1d.de/)
+- Dear ImGui - [Github tags](https://github.com/ocornut/imgui/tags)
+
 # References
 - [Learn OpenGL](https://learnopengl.com/)  - Website that I am actively using to learn the inner workings of OpenGL, I find it easier to understand than video tutorials.
 - [Dear ImGui Wiki](https://github.com/ocornut/imgui/wiki)  - The UI library's Wiki on github

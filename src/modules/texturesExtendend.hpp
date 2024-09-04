@@ -49,7 +49,14 @@ class TexturesExtended : public Module<TexturesExtended>
         glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(float) * 8, (void*) (6 * sizeof(float)));
         glEnableVertexAttribArray(2);
 
-        _texture = _shader.GenerateTexture("./textures/grass.jpg");
+        _textures = new unsigned int[2]{
+            _shader.GenerateTexture("./textures/ground.jpg", GL_RGB, GL_TEXTURE0),
+            _shader.GenerateTexture("./textures/grass.jpg", GL_RGB, GL_TEXTURE1)
+        };
+
+        _shader.Use();
+        _shader.SetUniform("texture0", 0);
+        _shader.SetUniform("texture1", 1);
 
         // Unbind
         glBindBuffer(GL_ARRAY_BUFFER, 0);
@@ -61,15 +68,30 @@ class TexturesExtended : public Module<TexturesExtended>
     {
         _shader.Use();
 
-        glBindTexture(GL_TEXTURE_2D, _texture);
+        glActiveTexture(GL_TEXTURE0);
+        glBindTexture(GL_TEXTURE_2D, _textures[0]);
+
+        glActiveTexture(GL_TEXTURE1);
+        glBindTexture(GL_TEXTURE_2D, _textures[1]);
 
         glBindVertexArray(_VAO);
         glDrawElements(GL_TRIANGLES, _nIndeces, GL_UNSIGNED_INT, 0);
     }
 
+    ~TexturesExtended()
+    {
+        delete[] _vertices;
+        delete[] _indeces;
+        delete[] _textures;
+
+        _vertices = nullptr;
+        _indeces = _textures = nullptr;
+    }
+
     private:
     Shader _shader;
-    unsigned int _VBO, _VAO, _EBO, _nVertices, _nIndeces, _nElements, _texture;
+    unsigned int _VBO, _VAO, _EBO, _nVertices, _nIndeces, _nElements;
     float* _vertices;
     unsigned int* _indeces;
+    unsigned int* _textures;
 };

@@ -24,8 +24,8 @@ You can raise issues if you come across any, I will try to assist if I can.
 - stb_image.h - [Single header image loader library](https://github.com/nothings/stb/blob/master/stb_image.h)
 
 # Textures
-- Freepik - [Author](https://www.freepik.com/author/macrovector) [Grass texture](https://www.freepik.com/free-vector/seamless-green-grass-pattern_13187581.htm#query=grass%20texture&position=0&from_view=keyword&track=ais_hybrid&uuid=a7bec154-241f-472b-881b-4c2f5c28fce2)
-- Freepik - [Author](https://www.freepik.com/author/luis-molinero) [Grass texture](https://www.freepik.com/free-photo/sand-ground-textured_1198415.htm#query=sand%20texture&position=46&from_view=keyword&track=ais_hybrid&uuid=c2b2809b-b8f8-42af-8eb8-d18075a33e36)
+- Freepik - [Author](https://www.freepik.com/author/macrovector)__[Grass texture](https://www.freepik.com/free-vector/seamless-green-grass-pattern_13187581.htm#query=grass%20texture&position=0&from_view=keyword&track=ais_hybrid&uuid=a7bec154-241f-472b-881b-4c2f5c28fce2)
+- Freepik - [Author](https://www.freepik.com/author/luis-molinero)__[Grass texture](https://www.freepik.com/free-photo/sand-ground-textured_1198415.htm#query=sand%20texture&position=46&from_view=keyword&track=ais_hybrid&uuid=c2b2809b-b8f8-42af-8eb8-d18075a33e36)
 
 # References
 - [Learn OpenGL](https://learnopengl.com/)  - Website that I am actively using to learn the inner workings of OpenGL, I find it easier to understand than video tutorials.

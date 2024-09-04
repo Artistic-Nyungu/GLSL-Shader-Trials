@@ -14,9 +14,41 @@ class Shader
         _id = makeShader(vertFilepath, fragFilepath);
     }
 
+    /// @brief Gets the unsigned int that represents the shader
+    /// @return Shader ID
     unsigned int GetID() const
     {
         return _id;
+    }
+
+    void SetUniform(const string& uniformName, ImVec2 value)
+    {
+        int uniformLocation = glGetUniformLocation(_id, uniformName.c_str());
+        glUniform2f(uniformLocation, value.x, value.y);
+    }
+
+    void SetUniform(const string& uniformName, ImVec4 value)
+    {
+        int uniformLocation = glGetUniformLocation(_id, uniformName.c_str());
+        glUniform4f(uniformLocation, value.x, value.y, value.z, value.w);
+    }
+
+    void SetUniform(const string& uniformName, float value)
+    {
+        int uniformLocation = glGetUniformLocation(_id, uniformName.c_str());
+        glUniform1f(uniformLocation, value);
+    }
+
+    void SetUniform(const string& uniformName, int value)
+    {
+        int uniformLocation = glGetUniformLocation(_id, uniformName.c_str());
+        glUniform1i(uniformLocation, value);
+    }
+
+    void SetUniform(const string& uniformName, bool value)
+    {
+        int uniformLocation = glGetUniformLocation(_id, uniformName.c_str());
+        glUniform1i(uniformLocation, value? 1: 0);
     }
 
     void Use()

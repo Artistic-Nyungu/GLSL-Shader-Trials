@@ -4,6 +4,7 @@
 #include "modules/helloWorld.hpp"
 #include "modules/helloWorldDynamic.hpp"
 #include "modules/textures.hpp"
+#include "modules/texturesExtendend.hpp"
 
 class GuiApplication : public Application<GuiApplication>
 {
@@ -17,6 +18,7 @@ class GuiApplication : public Application<GuiApplication>
         _helloWorldModule.StartUp();
         _helloWorldDynamicModule.StartUp();
         _texturesModule.StartUp();
+        _texturesExtendedModule.StartUp();
     }
 
     void Update()
@@ -38,6 +40,8 @@ class GuiApplication : public Application<GuiApplication>
                     Select(&_helloWorldDynamicModule);
                 if(Button("Textures"))
                     Select(&_texturesModule);
+                if(Button("Textures Extended"))
+                    Select(&_texturesExtendedModule);
 
             EndChild();
 
@@ -60,10 +64,16 @@ class GuiApplication : public Application<GuiApplication>
                     {
                         _helloWorldDynamicModule.SetViewport(ImVec4(pos.x, pos.y, size.x, size.y));
                         _helloWorldDynamicModule.Update();
-                    }else if(IsSelected(&_texturesModule))
+                    }
+                    else if(IsSelected(&_texturesModule))
                     {
                         _texturesModule.SetViewport(ImVec4(pos.x, pos.y, size.x, size.y));
                         _texturesModule.Update();
+                    }
+                    else if(IsSelected(&_texturesExtendedModule))
+                    {
+                        _texturesExtendedModule.SetViewport(ImVec4(pos.x, pos.y, size.x, size.y));
+                        _texturesExtendedModule.Update();
                     }
 
                     glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
@@ -81,6 +91,7 @@ class GuiApplication : public Application<GuiApplication>
     HelloWorld _helloWorldModule;
     HelloWorldDynamic _helloWorldDynamicModule;
     Textures _texturesModule;
+    TexturesExtended _texturesExtendedModule;
 
     bool IsSelected(void* ref)
     {

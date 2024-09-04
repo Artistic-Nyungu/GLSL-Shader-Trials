@@ -21,6 +21,40 @@ class Shader
         return _id;
     }
 
+    unsigned int GenerateTexture(const string& filename)
+    {
+        // Set texture wrap parameters
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_BORDER);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_BORDER);
+
+        // Set border color
+        glTexParameterfv(GL_TEXTURE_2D, GL_TEXTURE_BORDER_COLOR, new float[4] {0.f, 0.f, 0.f, 1.f});
+
+        // Set texture filtering parameters
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+        int width;
+        int height;
+        int nChannels;
+
+        // loading the image file
+        unsigned char* data = stbi_load(filename.c_str(), &width, &height, &nChannels, 0);
+
+        unsigned int texture;
+        glGenTextures(1, &texture);
+
+        glBindTexture(GL_TEXTURE_2D, texture);
+
+        // Generate texture
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
+        glGenerateMipmap(GL_TEXTURE_2D);    // For low res rendering bluh*3
+
+        stbi_image_free(data);
+
+        return texture;
+    }
+
     void SetUniform(const string& uniformName, ImVec2 value)
     {
         int uniformLocation = glGetUniformLocation(_id, uniformName.c_str());

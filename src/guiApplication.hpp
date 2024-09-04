@@ -1,7 +1,8 @@
 #pragma once
 
 #include "framework/application.hpp"
-#include "applications/HelloWorld.hpp"
+#include "modules/HelloWorld.hpp"
+#include "modules/HelloWorldDynamic.hpp"
 
 class GuiApplication : public Application<GuiApplication>
 {
@@ -9,7 +10,11 @@ class GuiApplication : public Application<GuiApplication>
     void StartUp()
     {
         _isWireframe = false;
-        _helloWorldApp.StartUp();
+        _selected = 0;
+
+        // Start up the modules
+        _helloWorldModule.StartUp();
+        _helloWorldDynamicModule.StartUp();
     }
 
     void Update()
@@ -22,16 +27,19 @@ class GuiApplication : public Application<GuiApplication>
         PushStyleColor(ImGuiCol_ChildBg, ImVec4(.5, .5, .5, 0));
         Begin("GUI Application", NULL, ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_NoResize);
             Checkbox("Render as wireframe", &_isWireframe);
-            // Application options
+
+            // Create options for selecting the modules
             BeginChild("Options", ImVec2(GetSize().x * .25, 0));
                 if(Button("Hello World"))
-                    Select(&_helloWorldApp);
+                    Select(&_helloWorldModule);
+                if(Button("Hello World Dynamic"))
+                    Select(&_helloWorldDynamicModule);
 
             EndChild();
 
             SameLine();
             BeginChild("Renderer", ImVec2(-10, -1));
-                if(IsSelected(&_helloWorldApp))
+                if(_selected != 0)
                 {
                     if(_isWireframe)
                         glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
@@ -39,8 +47,16 @@ class GuiApplication : public Application<GuiApplication>
                     ImVec2 pos = GetCursorScreenPos();
                     ImVec2 size = GetContentRegionAvail();
 
-                    _helloWorldApp.SetViewport(ImVec4(pos.x, pos.y, size.x, size.y));
-                    _helloWorldApp.Update();
+                    if(IsSelected(&_helloWorldModule))
+                    {
+                        _helloWorldModule.SetViewport(ImVec4(pos.x, pos.y, size.x, size.y));
+                        _helloWorldModule.Update();
+                    }
+                    else if(IsSelected(&_helloWorldDynamicModule))
+                    {
+                        _helloWorldDynamicModule.SetViewport(ImVec4(pos.x, pos.y, size.x, size.y));
+                        _helloWorldDynamicModule.Update();
+                    }
 
                     glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
                 }
@@ -50,9 +66,12 @@ class GuiApplication : public Application<GuiApplication>
     }
 
     private:
-    HelloWorld _helloWorldApp;
     size_t _selected;
     bool _isWireframe;
+
+    // Modules
+    HelloWorld _helloWorldModule;
+    HelloWorldDynamic _helloWorldDynamicModule;
 
     bool IsSelected(void* ref)
     {

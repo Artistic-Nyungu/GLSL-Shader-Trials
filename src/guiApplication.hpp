@@ -1,9 +1,9 @@
 #pragma once
 
 #include "framework/application.hpp"
-#include "modules/HelloWorld.hpp"
-#include "modules/HelloWorldDynamic.hpp"
-#include "modules/Textures.hpp"
+#include "modules/helloWorld.hpp"
+#include "modules/helloWorldDynamic.hpp"
+#include "modules/textures.hpp"
 
 class GuiApplication : public Application<GuiApplication>
 {

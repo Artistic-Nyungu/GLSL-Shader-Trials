@@ -10,7 +10,7 @@ class HelloWorldDynamic : public Module<HelloWorldDynamic>
     public:
     HelloWorldDynamic()
     {
-        _shader = Shader("./src/shaders/HelloWorldDynamic/vertex.vert", "./src/shaders/HelloWorldDynamic/fragment.frag");
+        _shader = Shader("./src/shaders/helloWorldDynamic/vertex.vert", "./src/shaders/helloWorldDynamic/fragment.frag");
     }
 
     void StartUp()

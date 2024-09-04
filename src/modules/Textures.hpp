@@ -9,7 +9,7 @@ class Textures : public Module<Textures>
     public:
     Textures()
     {
-        _shader = Shader("./src/shaders/Textures/vertex.vert", "./src/shaders/Textures/fragment.frag");
+        _shader = Shader("./src/shaders/textures/vertex.vert", "./src/shaders/textures/fragment.frag");
     }
 
     void StartUp()

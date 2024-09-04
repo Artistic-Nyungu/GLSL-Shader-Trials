@@ -8,7 +8,7 @@ class HelloWorld : public Module<HelloWorld>
     public:
     HelloWorld()
     {
-        _shader = Shader("./src/shaders/HelloWorld/vertex.vert", "./src/shaders/HelloWorld/fragment.frag");
+        _shader = Shader("./src/shaders/helloWorld/vertex.vert", "./src/shaders/helloWorld/fragment.frag");
     }
 
     void StartUp()

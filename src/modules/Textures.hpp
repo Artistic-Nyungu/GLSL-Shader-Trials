@@ -61,10 +61,20 @@ class Textures : public Module<Textures>
     {
         _shader.Use();
 
+        glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_2D, _texture);
 
         glBindVertexArray(_VAO);
         glDrawElements(GL_TRIANGLES, _nIndeces, GL_UNSIGNED_INT, 0);
+    }
+
+    ~Textures()
+    {
+        delete[] _vertices;
+        delete[] _indeces;
+
+        _vertices = nullptr;
+        _indeces = nullptr;
     }
 
     private:

@@ -14,9 +14,86 @@ class Shader
         _id = makeShader(vertFilepath, fragFilepath);
     }
 
+    /// @brief Gets the unsigned int that represents the shader
+    /// @return Shader ID
     unsigned int GetID() const
     {
         return _id;
+    }
+
+    unsigned int GenerateTexture(const string& filename, GLenum format = GL_RGB, GLenum textureUnit = GL_TEXTURE0)
+    {
+        glActiveTexture(textureUnit);
+
+        // Set texture wrap parameters
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_BORDER);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_BORDER);
+
+        // Set border color
+        float borderColor[] = {0.f, 0.f, 0.f, 1.f};
+        glTexParameterfv(GL_TEXTURE_2D, GL_TEXTURE_BORDER_COLOR, borderColor);
+
+        // Set texture filtering parameters
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+        int width;
+        int height;
+        int nChannels;
+
+        // loading the image file
+        stbi_set_flip_vertically_on_load(true);
+        unsigned char* data = stbi_load(filename.c_str(), &width, &height, &nChannels, 0);
+
+        if(!data)
+        {
+            cerr << "Could not load texture image: " << filesystem::absolute(filesystem::path(filename)).string() << endl;
+            return 0;
+        }
+
+        unsigned int texture;
+        glGenTextures(1, &texture);
+
+        glBindTexture(GL_TEXTURE_2D, texture);
+
+        // Generate texture
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
+        glGenerateMipmap(GL_TEXTURE_2D);    // For low res rendering bluh*3
+
+        stbi_image_free(data);
+        glBindTexture(GL_TEXTURE_2D, 0);
+
+        return texture;
+    }
+
+    void SetUniform(const string& uniformName, ImVec2 value)
+    {
+        int uniformLocation = glGetUniformLocation(_id, uniformName.c_str());
+        glUniform2f(uniformLocation, value.x, value.y);
+    }
+
+    void SetUniform(const string& uniformName, ImVec4 value)
+    {
+        int uniformLocation = glGetUniformLocation(_id, uniformName.c_str());
+        glUniform4f(uniformLocation, value.x, value.y, value.z, value.w);
+    }
+
+    void SetUniform(const string& uniformName, float value)
+    {
+        int uniformLocation = glGetUniformLocation(_id, uniformName.c_str());
+        glUniform1f(uniformLocation, value);
+    }
+
+    void SetUniform(const string& uniformName, int value)
+    {
+        int uniformLocation = glGetUniformLocation(_id, uniformName.c_str());
+        glUniform1i(uniformLocation, value);
+    }
+
+    void SetUniform(const string& uniformName, bool value)
+    {
+        int uniformLocation = glGetUniformLocation(_id, uniformName.c_str());
+        glUniform1i(uniformLocation, value? 1: 0);
     }
 
     void Use()

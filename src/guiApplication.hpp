@@ -3,6 +3,7 @@
 #include "framework/application.hpp"
 #include "modules/HelloWorld.hpp"
 #include "modules/HelloWorldDynamic.hpp"
+#include "modules/Textures.hpp"
 
 class GuiApplication : public Application<GuiApplication>
 {
@@ -15,6 +16,7 @@ class GuiApplication : public Application<GuiApplication>
         // Start up the modules
         _helloWorldModule.StartUp();
         _helloWorldDynamicModule.StartUp();
+        _texturesModule.StartUp();
     }
 
     void Update()
@@ -34,6 +36,8 @@ class GuiApplication : public Application<GuiApplication>
                     Select(&_helloWorldModule);
                 if(Button("Hello World Dynamic"))
                     Select(&_helloWorldDynamicModule);
+                if(Button("Textures"))
+                    Select(&_texturesModule);
 
             EndChild();
 
@@ -56,6 +60,10 @@ class GuiApplication : public Application<GuiApplication>
                     {
                         _helloWorldDynamicModule.SetViewport(ImVec4(pos.x, pos.y, size.x, size.y));
                         _helloWorldDynamicModule.Update();
+                    }else if(IsSelected(&_texturesModule))
+                    {
+                        _texturesModule.SetViewport(ImVec4(pos.x, pos.y, size.x, size.y));
+                        _texturesModule.Update();
                     }
 
                     glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
@@ -72,6 +80,7 @@ class GuiApplication : public Application<GuiApplication>
     // Modules
     HelloWorld _helloWorldModule;
     HelloWorldDynamic _helloWorldDynamicModule;
+    Textures _texturesModule;
 
     bool IsSelected(void* ref)
     {

@@ -21,14 +21,17 @@ class Shader
         return _id;
     }
 
-    unsigned int GenerateTexture(const string& filename)
+    unsigned int GenerateTexture(const string& filename, GLenum format = GL_RGB, GLenum textureUnit = GL_TEXTURE0)
     {
+        glActiveTexture(textureUnit);
+
         // Set texture wrap parameters
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_BORDER);
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_BORDER);
 
         // Set border color
-        glTexParameterfv(GL_TEXTURE_2D, GL_TEXTURE_BORDER_COLOR, new float[4] {0.f, 0.f, 0.f, 1.f});
+        float borderColor[] = {0.f, 0.f, 0.f, 1.f};
+        glTexParameterfv(GL_TEXTURE_2D, GL_TEXTURE_BORDER_COLOR, borderColor);
 
         // Set texture filtering parameters
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
@@ -39,7 +42,14 @@ class Shader
         int nChannels;
 
         // loading the image file
+        stbi_set_flip_vertically_on_load(true);
         unsigned char* data = stbi_load(filename.c_str(), &width, &height, &nChannels, 0);
+
+        if(!data)
+        {
+            cerr << "Could not load texture image: " << filesystem::absolute(filesystem::path(filename)).string() << endl;
+            return 0;
+        }
 
         unsigned int texture;
         glGenTextures(1, &texture);
@@ -51,6 +61,7 @@ class Shader
         glGenerateMipmap(GL_TEXTURE_2D);    // For low res rendering bluh*3
 
         stbi_image_free(data);
+        glBindTexture(GL_TEXTURE_2D, 0);
 
         return texture;
     }

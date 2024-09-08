@@ -28,9 +28,10 @@ You can raise issues if you come across any, I will try to assist if I can.
 - Freepik - [Author](https://www.freepik.com/author/luis-molinero)__[Grass texture](https://www.freepik.com/free-photo/sand-ground-textured_1198415.htm#query=sand%20texture&position=46&from_view=keyword&track=ais_hybrid&uuid=c2b2809b-b8f8-42af-8eb8-d18075a33e36)
 
 # References
-- [Learn OpenGL](https://learnopengl.com/)  - Website that I am actively using to learn the inner workings of OpenGL, I find it easier to understand than video tutorials.
+- [Learn OpenGL](https://learnopengl.com/) - Website that I am actively using to learn the inner workings of OpenGL, I find it easier to understand than video tutorials.
 - [Dear ImGui Wiki](https://github.com/ocornut/imgui/wiki)  - The UI library's Wiki on github
 - [OpenGL Shading Language 4.5](https://registry.khronos.org/OpenGL/specs/gl/GLSLangSpec.4.50.pdf) - This is a pdf of the GLSL 4.5 language specifications.
 - [Youtube - Zen Sepiol](https://www.youtube.com/watch?v=OYQp0GuoByM) - Used his optimization trick and based the Application and Module from his.
 - [Youtube - GetIntoGameDev](https://www.youtube.com/watch?v=4m9RHfdUU_M&list=PLn3eTxaOtL2PHxN8EHf-ktAcN-sGETKfw&pp=iAQB) - OpenGL with C++ playlist.
 - [Youtube - The Cherno](https://youtube.com/playlist?list=PLlrATfBNZ98foTJPJ_Ev03o2oq3-GGOS2&si=-ZL1d5Ehv0Pju44g) - OpenGL playlist
+- [OGLdev](https://ogldev.org/) - Website for Modern OpenGL Tutorials. It has videos and detailed description. Good for people who learn by watching or reading.
